@@ -52,7 +52,7 @@ app.put('/user/update/:id', (req, res) => { // edit or update some user info
     const index = users.findIndex(u => u.id === Number(id)); //verify if id exists
 
     if (index === -1) {
-        return res.status(404).json({ error: 'Usuário não encontrado' });
+        return res.status(404).json({ error: 'user not found' });
     }
 
     users[index] = {
